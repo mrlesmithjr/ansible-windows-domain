@@ -4,6 +4,4 @@
     name: RSAT-AD-AdminCenter
     state: present
   register: _windows_domain_rsat_ad_admincenter
-  when: >
-    reboot_required is defined and
-    reboot_required
+  when: windows_domain_admin_rsat|bool
